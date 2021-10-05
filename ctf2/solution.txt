@@ -1,0 +1,18 @@
+challenge: Flask of trouble
+category: web
+name: v4ndan
+
+To play just use: "docker-compose up"
+
+inside the challenge directory. The webpage will be available on your localhost on port 8000.
+
+solution:
+1. The players are presented with a contact form when they start.
+2. The admin will read and click all the web urls.
+3. But he won't fall for any sort of attack.
+4. After the user enters any url (ex burp collaborator) they will receive a get request on that URL as if the admin clicked on it.
+5. after inspection of the request headers players will find a new endpoint in the web app.
+6. Going to that endpoint won give them much except some social media URLs.
+7. Some of them are duds but the twitter one will have the url to someone's profile. proabbly the developer of the website.
+8. He has only one tweet which will contain a secret.
+9 Players will need to edit the cookie on this webapp (change logged_in to true from false) and then sign it with the secret to finally be presented with the flag.  

@@ -1,0 +1,6 @@
+1. install curl, and update upgrade
+2. download enumeration script fom ccc into some obscure folder
+3. enum script will save output to file and upload to a server.
+4. remove history
+
+story: alert from soc team but they are no good at their jobs, investigate the system.

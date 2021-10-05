@@ -1,0 +1,12 @@
+1. give a form in the start
+2. user fills in a url.
+3. simulate click.
+4. give a new page url in referrer header.
+5. browse to that page which gives us a twitter handle.
+5. post secret key on twitter.
+6. Use secret key to change and sign cookie. 
+7. show flag to those who login
+
+
+
+

@@ -1,0 +1,15 @@
+Challenge: Hardcore Investigation
+
+The challenge starts with the player getting a bash shell on an ubuntu environment. The premise is that some enumeration activity was performed on that ubuntu docker container and the player is needed to figure out what happened. 
+
+The player needs to look around for any hint/clues or just things that may look out of place. This is not some random hunt though. Any investigation starts with going through the logs. But this time the attacker has cleared all the important logs and the bash history. But one thing he forgot was that all docker containers store the terminal logs on the host system. 
+
+The user can find these docker logs in /var/log directory where one file will standout with the name "dockerLogs". We could have provided the player with these logs at the start but I decided to make it part of the challenge. Next the player needs to go through these logs.
+
+Just looking at the head and tail of these logs won't get them anywhere due to some data that may not look necessary at first sight along with some noise that the attacker tried to create for any logs he may not know about. The user may even go off in another direction if they are not careful. 
+
+Going through the logs , somewhere in the middle we can find all the commands that the attacker ran. After this point, it is an easy sail. The attacker transfered the enumeration program that collects data and sends it to his personal server. Attacker converts this program to an executable and then hides it in the /bin directory within plain sight. This was evidently his first time doing this sort of thing. 
+
+The attacker runs this program but forgets to delete the binary and goes along his way. The player just needs to find this binary and perform basic reverse engineering. Even a simple "strings" command will get them the precious flag that they so desire.
+
+The difficulty level of this challenge is easy due to very little technical knowledge requirement.
