@@ -1,0 +1,9 @@
+challenge name: Hardcore Investigation
+Name of creator: v4ndan
+To play: "docker run -it 1done/finalfinal:version1 bash" either on your machine that has docker already setup OR use "https://labs.play-with-docker.com/" to play.
+
+Premise: Your SOC team just notified of Recon activity in one of your docker deployments. Too bad you cheaped out on security and this is the only info they provided you. Investigate!
+
+Solution: find the logs file named "dockerLogs" in the /var/log directory and then try to find the malicious software used for enumeration. The binary is named "syslog" and hidden in the /bin directory. When finally finding the binary. either reverse engineer it or run a simple strings command on it to get the flag string.
+
+Difficulty level: easy/intermediate
